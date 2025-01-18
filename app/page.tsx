@@ -1,9 +1,9 @@
-import { Cards } from "@/components/cards/Cards";
+import { Globe } from "@/components/globe/Globe";
 
 export default function Home() {
   return (
-    <section>
-      <Cards />
+    <section className="w-full flex justify-center items-center h-screen">
+      <Globe />
     </section>
   );
 }

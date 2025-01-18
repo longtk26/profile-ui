@@ -1,4 +1,4 @@
-import { CloudRain, Coffee, Container, Database, KeyRound } from "lucide-react";
+import { BookCopy, CloudRain, Coffee, ContactRound, Container, Database, KeyRound } from "lucide-react";
 
 export const sidebarGroups = [
     {
@@ -37,6 +37,23 @@ export const sidebarGroups = [
                 title: "Docker",
                 url: "/devops/docker",
                 icon: Container,
+                contents: ["docker-compose", "kubernetes"],
+            }
+        ],
+    },
+    {
+        name: "About Author",
+        items: [
+            {
+                title: "Projects",
+                url: "/about/projects",
+                icon: BookCopy,
+                contents: ["ec2", "s3", "cloudfront"],
+            },
+            {
+                title: "Information",
+                url: "/about/info",
+                icon: ContactRound,
                 contents: ["docker-compose", "kubernetes"],
             }
         ],

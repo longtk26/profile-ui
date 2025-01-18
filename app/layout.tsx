@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/header/Header";
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/sidebar/app-sidebar";
+import { ThemeProvider } from "next-themes";
 
 const geistMono = Geist_Mono({
     variable: "--font-geist-mono",
@@ -22,15 +22,18 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body className={`${geistMono.variable} antialiased bg-black/5`}>
-                <SidebarProvider>
-                    <AppSidebar />
-                    <SidebarTrigger />
-                    <main>
-                        <Header />
-                        {children}
-                    </main>
-                </SidebarProvider>
+            <body
+                className={`${geistMono.variable} antialiased bg-black/5`}
+            >
+                <ThemeProvider attribute={"class"}>
+                    <SidebarProvider>
+                        <AppSidebar />
+                        <SidebarTrigger />
+                        <main>
+                            {children}
+                        </main>
+                    </SidebarProvider>
+                </ThemeProvider>
             </body>
         </html>
     );
