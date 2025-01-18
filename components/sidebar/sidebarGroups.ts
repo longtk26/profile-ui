@@ -6,19 +6,19 @@ export const sidebarGroups = [
         items: [
             {
                 title: "Database",
-                url: "/backend/database",
+                url: "/blogs/backend/database",
                 icon: Database,
                 contents: ["postgres", "elasticsearch", "redis"],
             },
             {
                 title: "Authentication",
-                url: "/backend/authentication",
+                url: "/blogs/backend/authentication",
                 icon: KeyRound,
                 contents: ["sso", "jwt", "oauth2"],
             },
             {
                 title: "JAVA",
-                url: "/backend/java",
+                url: "/blogs/backend/java",
                 icon: Coffee,
                 contents: ["spring boot"],
             },
@@ -29,13 +29,13 @@ export const sidebarGroups = [
         items: [
             {
                 title: "AWS",
-                url: "/devops/aws",
+                url: "/blogs/devops/aws",
                 icon: CloudRain,
                 contents: ["ec2", "s3", "cloudfront"],
             },
             {
                 title: "Docker",
-                url: "/devops/docker",
+                url: "/blogs/devops/docker",
                 icon: Container,
                 contents: ["docker-compose", "kubernetes"],
             }
@@ -46,13 +46,13 @@ export const sidebarGroups = [
         items: [
             {
                 title: "Projects",
-                url: "/about/projects",
+                url: "/blogs/about/projects",
                 icon: BookCopy,
                 contents: ["ec2", "s3", "cloudfront"],
             },
             {
                 title: "Information",
-                url: "/about/info",
+                url: "/blogs/about/info",
                 icon: ContactRound,
                 contents: ["docker-compose", "kubernetes"],
             }

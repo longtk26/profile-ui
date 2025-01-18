@@ -1,7 +1,11 @@
 import type { Metadata } from "next";
 import { Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
+import {
+    SidebarInset,
+    SidebarProvider,
+    SidebarTrigger,
+} from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/sidebar/app-sidebar";
 import { ThemeProvider } from "next-themes";
 
@@ -22,16 +26,14 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body
-                className={`${geistMono.variable} antialiased bg-black/5`}
-            >
+            <body className={`${geistMono.variable} antialiased bg-black/5`}>
                 <ThemeProvider attribute={"class"}>
                     <SidebarProvider>
                         <AppSidebar />
                         <SidebarTrigger />
-                        <main>
-                            {children}
-                        </main>
+                        <SidebarInset>
+                            <main>{children}</main>
+                        </SidebarInset>
                     </SidebarProvider>
                 </ThemeProvider>
             </body>
